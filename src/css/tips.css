@@ -1,0 +1,42 @@
+/* ── TIPS SECTION ── */
+.tips-section {
+  background: var(--dark); padding: 88px 0; overflow: hidden; position: relative;
+}
+.tips-section::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(34,81,197,.2) 0%, transparent 65%);
+  pointer-events: none;
+}
+.tips-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+
+.tips-header { text-align: center; margin-bottom: 52px; padding: 0 24px; }
+.tips-header h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 4vw, 2.6rem); color: #fff; margin-bottom: 12px;
+}
+.tips-header p { color: rgba(255,255,255,.6); max-width: 500px; margin: 0 auto; line-height: 1.7; }
+
+.tips-track-wrap { overflow: hidden; position: relative; }
+.tips-track-wrap::before,
+.tips-track-wrap::after {
+  content: ''; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2; pointer-events: none;
+}
+.tips-track-wrap::before { left: 0; background: linear-gradient(90deg, var(--dark), transparent); }
+.tips-track-wrap::after  { right: 0; background: linear-gradient(-90deg, var(--dark), transparent); }
+
+.tips-track { display: flex; gap: 20px; width: max-content; will-change: transform; padding: 12px 0; }
+
+.tip-card {
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
+  border-radius: 18px; padding: 24px 22px; width: 260px; flex-shrink: 0;
+  transition: background .2s, border-color .2s;
+  cursor: default;
+}
+.tip-card:hover { background: rgba(255,255,255,.09); border-color: rgba(40,196,176,.35); }
+.tip-icon     { font-size: 1.8rem; margin-bottom: 12px; }
+.tip-category {
+  font-size: .65rem; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 8px;
+}
+.tip-title { font-size: .95rem; font-weight: 600; color: #fff; margin-bottom: 8px; line-height: 1.3; }
+.tip-text  { font-size: .8rem; color: rgba(255,255,255,.55); line-height: 1.6; }
