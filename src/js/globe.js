@@ -8,7 +8,7 @@ const UBATE_LON = -73.81;
 // Convert Lat/Lon to a 3D Cartesian Coordinate (Vector3)
 function latLonToVector3(lat, lon, radius) {
   const phi = (90 - lat) * (Math.PI / 180);
-  const theta = (lon + 180) * (Math.PI / 180);
+  const theta = (lon + 90) * (Math.PI / 180); // Ajuste de +90 para sincronizar textura con la malla
 
   return new THREE.Vector3(
     -(radius * Math.sin(phi) * Math.cos(theta)),
@@ -34,13 +34,13 @@ export function initGlobe() {
   
   // ── CAMERA
   const camera = new THREE.PerspectiveCamera(45, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
-  camera.position.set(0, 0, 4.5); // Initial camera position from space
+  camera.position.set(0, 0, 8); // Start further away for zoom in effect
 
   // ── LIGHTS
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
   scene.add(ambientLight);
   
-  const sun = new THREE.DirectionalLight(0xffffff, 1.8);
+  const sun = new THREE.DirectionalLight(0xffffff, 3.0);
   sun.position.set(5, 3, 5);
   scene.add(sun);
 
@@ -77,6 +77,10 @@ export function initGlobe() {
   scene.add(globeGroup);
   globeGroup.add(globe);
 
+  // Offset inicial del grupo para animar el giro de entrada
+  globeGroup.rotation.y = -Math.PI * 0.6;
+  globeGroup.rotation.x = Math.PI * 0.1;
+
   // ── ATMOSPHERE (glow)
   const atmosGeo = new THREE.SphereGeometry(1.04, 64, 64);
   const atmosMat = new THREE.MeshPhongMaterial({
@@ -105,41 +109,35 @@ export function initGlobe() {
 
   const tl = gsap.timeline({ delay: 0.3 });
 
-  // Camera zoom: far → medium
-  tl.to(camera.position, {
-    z: 2.8,
-    duration: 2.8,
-    ease: 'power2.in'
-  }, 0.5);
+  // Animación del globo girando hacia Ubaté
+  tl.to(globeGroup.rotation, {
+    y: 0,
+    x: 0,
+    duration: 4.5,
+    ease: 'power2.inOut'
+  }, 0);
 
-  // Camera zoom: medium → close
-  tl.to(camera.position, {
-    z: 1.85,
-    duration: 2,
-    ease: 'power3.inOut'
-  }, 3);
-
-  // Final zoom
+  // Animación de cámara haciendo zoom in continuo directo a Ubaté
   tl.to(camera.position, {
     z: 1.52,
-    duration: 1.5,
-    ease: 'power2.out'
-  }, 4.8);
+    duration: 4.5,
+    ease: 'power2.inOut'
+  }, 0);
 
-  // After zoom, slight tilt
+  // Ligerísimo tilt al final para más estética
   tl.to(camera.position, {
     y: 0.12,
     x: 0.04,
-    duration: 1.2,
+    duration: 2,
     ease: 'power1.inOut'
-  }, 5.5);
+  }, 3.5);
 
   // Animate hero text in
-  tl.to('.hero-eyebrow', { opacity: 1, y: 0, duration: .6, ease: 'power2.out' }, 5.0);
-  tl.to('.hero-title',   { opacity: 1, y: 0, duration: .7, ease: 'power2.out' }, 5.25);
-  tl.to('.hero-sub',     { opacity: 1, y: 0, duration: .6, ease: 'power2.out' }, 5.6);
-  tl.to('.hero-cta',     { opacity: 1, y: 0, duration: .5, ease: 'power2.out' }, 5.9);
-  tl.to('.hero-badges',  { opacity: 1, y: 0, duration: .5, ease: 'power2.out' }, 6.1);
+  tl.to('.hero-eyebrow', { opacity: 1, y: 0, duration: .6, ease: 'power2.out' }, 4.0);
+  tl.to('.hero-title',   { opacity: 1, y: 0, duration: .7, ease: 'power2.out' }, 4.25);
+  tl.to('.hero-sub',     { opacity: 1, y: 0, duration: .6, ease: 'power2.out' }, 4.6);
+  tl.to('.hero-cta',     { opacity: 1, y: 0, duration: .5, ease: 'power2.out' }, 4.9);
+  tl.to('.hero-badges',  { opacity: 1, y: 0, duration: .5, ease: 'power2.out' }, 5.1);
 
   gsap.set(['.hero-eyebrow','.hero-title','.hero-sub','.hero-cta','.hero-badges'], { y: 24 });
 
@@ -148,8 +146,8 @@ export function initGlobe() {
   function animate() {
     animId = requestAnimationFrame(animate);
     
-    // Subtle rotation
-    globeGroup.rotation.y += 0.0008;
+    // Movimiento imperceptible
+    globeGroup.rotation.y += 0.0001;
     stars.rotation.y += 0.00005;
 
     renderer.render(scene, camera);

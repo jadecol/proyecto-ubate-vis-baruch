@@ -16,8 +16,8 @@
 .hero-overlay {
   position: absolute; inset: 0; z-index: 1;
   background:
-    linear-gradient(180deg, rgba(20,28,46,.45) 0%, rgba(20,28,46,.65) 100%),
-    radial-gradient(ellipse 90% 60% at 15% 60%, rgba(34,81,197,.35) 0%, transparent 65%);
+    linear-gradient(180deg, rgba(20,28,46,.2) 0%, rgba(20,28,46,.4) 100%),
+    radial-gradient(ellipse 90% 60% at 15% 60%, rgba(34,81,197,.2) 0%, transparent 65%);
 }
 .hero-grid {
   position: absolute; inset: 0; z-index: 1;
