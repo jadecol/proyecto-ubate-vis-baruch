@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Proyecto Habitacional Ubaté — Lotes y apartamentos con subsidio VIS hasta $52.000.000. Estrato 2 y 3, Cundinamarca." />
+  <meta name="description"
+    content="Proyecto Habitacional Ubaté — Lotes y apartamentos con subsidio VIS hasta $52.000.000. Estrato 2 y 3, Cundinamarca." />
   <title>Proyecto Habitacional Ubaté | Jadecol</title>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="/src/css/base.css" />
   <link rel="stylesheet" href="/src/css/hero.css" />
   <link rel="stylesheet" href="/src/css/cards.css" />
@@ -16,6 +23,7 @@
   <link rel="stylesheet" href="/src/css/legal.css" />
   <link rel="stylesheet" href="/src/css/floating.css" />
 </head>
+
 <body>
 
   <!-- ── HERO ── -->
@@ -59,11 +67,13 @@
     </div>
     <div class="cards-grid">
       <div class="card reveal reveal-delay-1">
-        <div class="card-img"><img src="https://picsum.photos/id/1058/600/400" alt="Lote 81.5 m²" loading="lazy" /></div>
+        <div class="card-img"><img src="./src/assets/images/lote_tipoA.jpg" alt="Lote 81.5 m²" loading="lazy" />
+        </div>
         <div class="card-body">
           <span class="card-tag tag-blue">Lote</span>
           <div class="card-title">81.5 m²</div>
-          <p class="card-desc">Ideal para construir hasta 3 pisos. Perfecto para familias que desean crecer o generar ingresos adicionales.</p>
+          <p class="card-desc">Ideal para construir hasta 3 pisos. Perfecto para familias que desean crecer o generar
+            ingresos adicionales.</p>
           <div class="card-price-box">
             <div class="price-label">Precio de venta</div>
             <div class="price-main">$ 90.000.000</div>
@@ -76,11 +86,12 @@
         </div>
       </div>
       <div class="card reveal reveal-delay-2">
-        <div class="card-img"><img src="https://picsum.photos/id/1067/600/400" alt="Lote 96 m²" loading="lazy" /></div>
+        <div class="card-img"><img src="./src/assets/images/lote_tipoB.jpg" alt="Lote 96 m²" loading="lazy" /></div>
         <div class="card-body">
           <span class="card-tag tag-blue">Lote Amplio</span>
           <div class="card-title">96 m²</div>
-          <p class="card-desc">Espacioso, ideal para casa de 1 piso con jardín y garaje. La tranquilidad que buscas para tu familia.</p>
+          <p class="card-desc">Espacioso, ideal para casa de 1 piso con jardín y garaje. La tranquilidad que buscas para
+            tu familia.</p>
           <div class="card-price-box">
             <div class="price-label">Precio de venta</div>
             <div class="price-main">$ 80.000.000</div>
@@ -95,12 +106,13 @@
       <div class="card card-highlight reveal reveal-delay-3">
         <div class="card-img">
           <span class="card-ribbon">Subsidio disponible</span>
-          <img src="https://picsum.photos/id/1076/600/400" alt="Apartamento 72 m²" loading="lazy" />
+          <img src="./src/assets/images/apto_tipoA.jpg" alt="Apartamento 72 m²" loading="lazy" />
         </div>
         <div class="card-body">
           <span class="card-tag tag-teal">Propiedad Horizontal</span>
           <div class="card-title">72 m²</div>
-          <p class="card-desc">Vivienda lista para habitar, zonas comunes, parqueadero y vigilancia. Aplica subsidio.</p>
+          <p class="card-desc">Vivienda lista para habitar, zonas comunes, parqueadero y vigilancia. Aplica subsidio.
+          </p>
           <div class="card-price-box">
             <div class="price-label">Precio total</div>
             <div class="price-strike">$ 140.000.000</div>
@@ -159,7 +171,7 @@
         <div class="step-label right" id="lbl4">Tus datos</div>
       </div>
 
-      <form method="POST" action="https://formspree.io/f/tu-codigo-aqui" id="mainForm">
+      <form method="POST" action="https://formspree.io/f/xwvzdobe" id="mainForm">
         <input type="hidden" name="perfil_laboral" id="hPerfil" />
         <input type="hidden" name="arriendo_mensual" id="hArriendo" />
         <input type="hidden" name="score_arriendo" id="hScoreArriendo" />
@@ -182,7 +194,8 @@
         <div class="step-panel form-card" id="step2">
           <div id="profileChip2" class="profile-summary"></div>
           <h3 class="step-title">¿Cuánto paga de arriendo actualmente?</h3>
-          <p class="step-desc">Quien paga arriendo cumplido demuestra capacidad de cuota. <strong>Esta información nos permite ofrecerle condiciones especiales.</strong></p>
+          <p class="step-desc">Quien paga arriendo cumplido demuestra capacidad de cuota. <strong>Esta información nos
+              permite ofrecerle condiciones especiales.</strong></p>
           <div class="rent-options" id="rentOptions"></div>
           <div id="rentMessage" class="rent-message" style="display:none;"></div>
           <div class="btn-row">
@@ -262,15 +275,18 @@
           <div class="radio-options">
             <label class="radio-option">
               <input type="radio" name="opcion" value="Lote 81.5 m2 - $90M" />
-              <span class="radio-text">Lote de 81.5 m² — <strong>$90 Millones</strong><br>Para construir hasta 3 pisos</span>
+              <span class="radio-text">Lote de 81.5 m² — <strong>$90 Millones</strong><br>Para construir hasta 3
+                pisos</span>
             </label>
             <label class="radio-option">
               <input type="radio" name="opcion" value="Lote 96 m2 - $80M" />
-              <span class="radio-text">Lote de 96 m² — <strong>$80 Millones</strong><br>Para casa de 1 piso con jardín</span>
+              <span class="radio-text">Lote de 96 m² — <strong>$80 Millones</strong><br>Para casa de 1 piso con
+                jardín</span>
             </label>
             <label class="radio-option">
               <input type="radio" name="opcion" value="Apartamento 72 m2 - Subsidio" />
-              <span class="radio-text">Apartamento 72 m² — <strong>$140 Millones</strong><br><span class="green">Subsidio disponible hasta $52 Millones</span></span>
+              <span class="radio-text">Apartamento 72 m² — <strong>$140 Millones</strong><br><span
+                  class="green">Subsidio disponible hasta $52 Millones</span></span>
             </label>
           </div>
           <label class="checkbox-row">
@@ -291,12 +307,16 @@
           <div class="auth-box blue">
             <label class="auth-label">
               <input type="checkbox" name="autoriza_comunicaciones" id="chkComun" />
-              <span><strong>Opcional:</strong> Autorizo recibir novedades y consejos por WhatsApp y SMS. Puedo revocar escribiendo "STOP".</span>
+              <span><strong>Opcional:</strong> Autorizo recibir novedades y consejos por WhatsApp y SMS. Puedo revocar
+                escribiendo "STOP".</span>
             </label>
           </div>
           <button type="submit" class="submit-btn">Enviar mis datos</button>
           <p class="privacy-note">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
             Datos protegidos · Ley 1581 de 2012
             <button type="button" class="link-btn" data-modal="politica">Ver política</button>
           </p>
@@ -323,11 +343,18 @@
   <!-- ── FLOATING BUTTONS ── -->
   <div class="float-cluster">
     <a href="https://t.me/ubate_vivienda_bot" target="_blank" class="float-btn float-btn-tg" title="Bot Telegram 24/7">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+      </svg>
       <span class="float-label">Bot 24/7</span>
     </a>
-    <a href="https://wa.me/573112621281?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20proyecto%20habitacional%20en%20Ubat%C3%A9" target="_blank" class="float-btn float-btn-wa" title="WhatsApp asesor">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    <a href="https://wa.me/573112621281?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20proyecto%20habitacional%20en%20Ubat%C3%A9"
+      target="_blank" class="float-btn float-btn-wa" title="WhatsApp asesor">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+      </svg>
       <span class="float-label">Hablar con asesor</span>
     </a>
   </div>
@@ -364,4 +391,5 @@
 
   <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
