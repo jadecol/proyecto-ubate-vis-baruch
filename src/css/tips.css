@@ -33,7 +33,7 @@
   cursor: default;
 }
 .tip-card:hover { background: rgba(255,255,255,.09); border-color: rgba(40,196,176,.35); }
-.tip-icon     { font-size: 1.8rem; margin-bottom: 12px; }
+.tip-icon { font-size: 3.5rem; margin-bottom: 18px; line-height: 1; display: inline-block; }
 .tip-category {
   font-size: .65rem; font-weight: 700; letter-spacing: .12em;
   text-transform: uppercase; color: var(--teal); margin-bottom: 8px;

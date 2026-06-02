@@ -113,7 +113,7 @@ input[type="range"] {
   cursor: pointer; transition: all var(--transition);
   box-shadow: 0 4px 20px rgba(34,81,197,.3);
 }
-.btn-next:hover { background: var(--blue); transform: translateY(-2px); }
+.btn-next:hover { background: var(--blue); transform: translateY(-3px) scale(1.01); box-shadow: 0 8px 25px rgba(34,81,197,.4); }
 .btn-next:disabled { background: #D1D5DB; cursor: not-allowed; transform: none; box-shadow: none; }
 
 .submit-btn {
@@ -123,12 +123,19 @@ input[type="range"] {
   border: none; border-radius: var(--radius-md); cursor: pointer;
   transition: all var(--transition); box-shadow: 0 4px 20px rgba(34,81,197,.3);
 }
-.submit-btn:hover { background: var(--blue); transform: translateY(-2px); }
+.submit-btn:hover { background: var(--blue); transform: translateY(-3px) scale(1.01); box-shadow: 0 8px 25px rgba(34,81,197,.4); }
 
 .link-btn {
   background: none; border: none; color: var(--blue-mid);
   font-weight: 600; cursor: pointer; text-decoration: underline;
   font-size: inherit; padding: 0; font-family: var(--font-sans);
+}
+
+.trust-badge {
+  display: block; text-align: center;
+  font-size: 0.75rem; font-weight: 500;
+  color: rgba(107, 114, 128, 0.85); /* Un gris suave */
+  margin-top: 10px;
 }
 
 /* ── PROFILE CHIP ── */

@@ -25,6 +25,15 @@
 </head>
 
 <body>
+  <!-- ── SCARCITY BANNER ── -->
+  <div class="scarcity-banner">
+    <div class="scarcity-text">
+      🔥 <strong>Bono de lanzamiento:</strong> Asesoría VIP y Gastos notariales gratis para los primeros 25 inscritos. (Cupos restantes: <span id="cupos-text">7/25</span>)
+    </div>
+    <div class="scarcity-progress-bar">
+      <div id="cupos-bar" class="scarcity-progress-fill" style="width: 75%;"></div>
+    </div>
+  </div>
 
   <!-- ── HERO ── -->
   <header id="hero">
@@ -39,8 +48,8 @@
       <span class="hero-eyebrow">Proyecto Habitacional · Ubaté, Cundinamarca</span>
       <h1 class="hero-title">
         El momento de tener<br>
-        su propio hogar<br>
-        <em>ya llegó.</em>
+        tu propio hogar<br>
+        <em>Ya llegó.</em>
       </h1>
       <p class="hero-sub">
         Miles de familias colombianas siguen pagando arriendo sin saber que
@@ -56,14 +65,14 @@
         <span class="badge"><span class="badge-dot"></span>Lotes y apartamentos</span>
       </div>
     </div>
-    <div class="scroll-hint">
+    <a href="#opciones" class="scroll-hint">
       <span>Ver opciones</span>
       <span class="scroll-arrow"></span>
-    </div>
+    </a>
   </header>
 
   <!-- ── CARDS ── -->
-  <section class="cards-section">
+  <section class="cards-section" id="opciones">
     <div class="cards-header reveal">
       <div class="section-label">Opciones disponibles</div>
       <h2>Elige la opción perfecta<br>para tu familia</h2>
@@ -71,7 +80,8 @@
     </div>
     <div class="cards-grid">
       <div class="card reveal reveal-delay-1">
-        <div class="card-img"><img src="./src/assets/images/lote_tipoA.jpg" alt="Lote 81.5 m²" loading="lazy" decoding="async" />
+        <div class="card-img"><img src="./src/assets/images/lote_tipoA.jpg" alt="Lote 81.5 m²" loading="lazy"
+            decoding="async" />
         </div>
         <div class="card-body">
           <span class="card-tag tag-blue">Lote</span>
@@ -90,7 +100,8 @@
         </div>
       </div>
       <div class="card reveal reveal-delay-2">
-        <div class="card-img"><img src="./src/assets/images/lote_tipoB.jpg" alt="Lote 96 m²" loading="lazy" decoding="async" /></div>
+        <div class="card-img"><img src="./src/assets/images/lote_tipoB.jpg" alt="Lote 96 m²" loading="lazy"
+            decoding="async" /></div>
         <div class="card-body">
           <span class="card-tag tag-blue">Lote Amplio</span>
           <div class="card-title">96 m²</div>
@@ -192,6 +203,7 @@
           <div class="btn-row">
             <button type="button" class="btn-next" id="btnNext1" disabled>Continuar →</button>
           </div>
+          <span class="trust-badge">⏱️ Toma menos de 1 minuto</span>
         </div>
 
         <!-- PASO 2: ARRIENDO -->
@@ -206,12 +218,13 @@
             <button type="button" class="btn-back" id="backBtn2">← Atrás</button>
             <button type="button" class="btn-next" id="btnNext2" disabled>Continuar →</button>
           </div>
+          <span class="trust-badge">⏱️ Toma menos de 1 minuto</span>
         </div>
 
         <!-- PASO 3: CALCULADORA -->
         <div class="step-panel form-card" id="step3">
           <div id="profileChip3" class="profile-summary"></div>
-          <h3 class="step-title">Calculadora de subsidio</h3>
+          <h3 class="step-title">Descubre de cuánto será tu subsidio</h3>
           <p class="step-desc">Ingresa tus datos económicos y te mostramos cuánto subsidio podrías recibir.</p>
           <div class="calc-grid">
             <div class="field-wrap">
@@ -316,6 +329,7 @@
             </label>
           </div>
           <button type="submit" class="submit-btn">Enviar mis datos</button>
+          <span class="trust-badge">🔒 Tu información está encriptada y segura. Cero spam.</span>
           <p class="privacy-note">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <rect x="3" y="11" width="18" height="11" rx="2" />

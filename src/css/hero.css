@@ -1,7 +1,35 @@
+/* ── SCARCITY BANNER ── */
+.scarcity-banner {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: linear-gradient(90deg, #1A8F82, var(--teal));
+  color: #fff; padding: 12px 24px; text-align: center;
+  font-size: 0.85rem; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.scarcity-text strong { font-weight: 800; }
+.scarcity-progress-bar {
+  width: 100%; max-width: 240px; height: 6px;
+  background: rgba(0,0,0,0.2); border-radius: 4px; overflow: hidden;
+}
+.scarcity-progress-fill {
+  height: 100%; background: #fff; border-radius: 4px;
+  box-shadow: 0 0 8px rgba(255,255,255,0.8);
+  transition: width 1s ease-in-out;
+}
+#cupos-text { display: inline-block; transition: color 0.3s; }
+.scarcity-alert {
+  color: #fbbf24;
+  animation: scarcity-pulse 0.5s ease 2;
+}
+@keyframes scarcity-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.4); text-shadow: 0 0 10px rgba(251,191,36,0.8); }
+}
+
 /* ── HERO ── */
 #hero {
   position: relative; overflow: hidden;
-  padding: 130px 24px 110px; text-align: center;
+  padding: 170px 24px 110px; text-align: center;
   background: var(--dark); min-height: 100vh;
   display: flex; align-items: center; justify-content: center;
 }
@@ -68,8 +96,8 @@
   opacity: 0; /* animated by GSAP */
 }
 .hero-cta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 36px rgba(40,196,176,.6);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(40,196,176,.7);
 }
 
 .hero-badges {
