@@ -51,6 +51,14 @@
 .sticky-close:hover { color: rgba(255,255,255,.8); }
 
 /* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .float-cluster {
+    transform: scale(0.75); /* Más pequeño */
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
 @media (max-width: 560px) {
   .sticky-cta   { flex-wrap: wrap; gap: 10px; }
   .float-btn .float-label { display: none; }

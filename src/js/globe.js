@@ -116,7 +116,7 @@ export function initGlobe() {
 
   // Gira hasta Colombia
   tl.to(globeGroup.rotation, {
-    y: -0.65, // Cambiamos -1.5 por -0.7 para traer a Colombia hacia el centro-derecha
+    y: isMobile ? -0.15 : -0.65, // -0.15 trae a Colombia hacia la derecha en móvil
     x: 0.1,
     duration: 6,
     ease: 'power2.inOut'
