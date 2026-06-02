@@ -266,39 +266,54 @@
 }
 
 .scroll-hint {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  color: rgba(255, 255, 255, .3);
-  font-size: .7rem;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  z-index: 2;
-  opacity: 0;
-  animation: fadeUp .6s 3.2s ease forwards;
+  position: absolute !important;
+  bottom: 20px !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: 0 auto !important;
+  width: fit-content !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  z-index: 50 !important;
+  opacity: 1 !important;
+  animation: none !important; /* Evita que animaciones previas lo oculten */
+}
+
+.scroll-hint span {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 1px !important;
 }
 
 .scroll-arrow {
-  width: 24px;
-  height: 24px;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: rotate(45deg);
-  animation: bounce 1.8s infinite;
+  width: 20px !important;
+  height: 20px !important;
+  border-right: 2px solid #ffffff !important;
+  border-bottom: 2px solid #ffffff !important;
+  transform: rotate(45deg) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8)) !important;
 }
 
 /* ── RESPONSIVE HERO ── */
 @media (max-width: 768px) {
   .hero-inner {
-    padding-top: 3rem;
+    padding-top: 1rem !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /* Subimos todo el bloque */
     gap: 0.75rem;
     /* Espaciado aún más ajustado */
+  }
+
+  /* Separamos el bloque de texto informativo y CTA hacia abajo */
+  .hero-sub,
+  .hero-cta,
+  .hero-badges {
+    margin-top: 2rem !important;
   }
 
   .hero-title {
@@ -316,12 +331,13 @@
 
   .hero-cta {
     font-size: 0.95rem;
-    width: 100%;
-    max-width: 300px;
-    /* Botón un poco más compacto */
     padding: 0.8rem 1.5rem;
     /* Ajuste interno del botón */
-    margin-bottom: 0.75rem !important;
+    display: block !important;
+    margin: 0 auto 0.75rem auto !important;
+    text-align: center !important;
+    width: 90% !important;
+    max-width: 320px !important;
     /* Separa el botón de las píldoras inferiores */
   }
 

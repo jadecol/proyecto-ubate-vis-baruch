@@ -17,11 +17,19 @@ export function initSticky() {
   }
 
   function evaluate() {
+    const heroH = document.querySelector('#hero')?.offsetHeight || 600
+
+    // Resetear si vuelve arriba
+    if (window.scrollY < heroH * 0.2) {
+      manualHide = false
+    }
+
     if (manualHide) return
-    const heroH  = document.querySelector('#hero')?.offsetHeight || 600
+
     const formTop = formSec.getBoundingClientRect().top
     const pastHero = window.scrollY > heroH * 0.6
-    const atForm   = formTop < window.innerHeight * 0.85 && formTop > -200
+    const atForm = formTop < window.innerHeight * 0.85 && formTop > -200
+
     bar.classList.toggle('visible', pastHero && !atForm)
   }
 
