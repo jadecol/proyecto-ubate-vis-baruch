@@ -91,7 +91,7 @@ export function initGlobe() {
   // Encuadre de la Cámara
   tl.to(camera.position, {
     x: isMobile ? 0 : -0.75,
-    y: isMobile ? 0 : 0.05,
+    y: isMobile ? 0.05 : 0.05,
     z: isMobile ? 1.9 : 2.0,
     duration: 6,
     ease: 'power2.inOut'
@@ -147,7 +147,7 @@ export function initGlobe() {
     // Posiciona directamente sin animaciones que causen bugs
     camera.position.set(
       mobile ? 0 : -0.75,
-      mobile ? 0 : 0.05,
+      mobile ? 0.05 : 0.05,
       mobile ? 1.9 : 2.0
     );
     globeGroup.rotation.y = mobile ? -0.15 : -0.65;
